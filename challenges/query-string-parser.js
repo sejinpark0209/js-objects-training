@@ -45,3 +45,13 @@
 */
 
 // YOUR CODE HERE
+function parseQueryString(str) {
+  var result = {};
+  var splitStr = str.split("&");
+  for(var i = 0; i < splitStr.length; i++) {
+    result[splitStr[i].split("=")[0]] = splitStr[i].split("=")[1];
+  }
+  return result;
+}
+parseQueryString("first=alpha&last=omega");
+

@@ -34,3 +34,27 @@
 */
 
 // YOUR CODE HERE
+
+function birthdayReminder(arr) {
+  var result = [];
+  for(var i = 0; i < arr.length; i++) {
+    var month = Number(arr[i].dob.split("/")[0]) - 4;
+    var date = Number(arr[i].dob.split("/")[1]) - 4 ;
+    var leftDay = undefined;
+    if(month === 0) {
+      leftDay = 
+    }
+    result.push(arr[i].name + 's birthday is in ' +  + " days");
+  }
+  return result;
+}
+birthdayReminder([
+    {
+      name: "Jack",
+      dob: "10/31/2013"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/1975"
+    }
+  ]);

@@ -38,3 +38,15 @@
 */
 
 // YOUR CODE HERE
+var table = [{steps: 0}, null, null, null];
+function pingpong(arr) {
+  var count = 0;
+  for(var i in arr)
+  if(arr[i].hasOwnProperty('steps')) {
+    arr[i + 1] = arr[i];
+    arr[i] = null;
+  }
+}
+
+
+pingpong(table);

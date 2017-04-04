@@ -31,3 +31,28 @@
 */
 
 // YOUR CODE HERE
+
+//input : string(word)
+//output : object (key : string , value : number ) 
+
+
+
+function letterCount(word) {
+  var result = {};
+  for(var i in word) {
+    if(word.length > 0) {
+      if(result.hasOwnProperty(word[i])) {
+        result[word[i]] += 1;
+      } else {  
+        result[word[i]] = 1;
+      }
+    }
+  }
+  return result;
+}
+
+
+
+
+
+
